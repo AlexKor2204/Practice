@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+        /*
+        // Change between the number
+        var num1 = 5;
+        var num2 = 7;
+        // Usage of additional variable
+        var temp = num1;
+        num1 = num2;
+        num2 = temp;
+        // Without additional var
+        num1 = num1 + num2; // num1 = 5 + 7 = 12
+        num2 = num1 - num2; // num2 = 12 - 7 = 5
+        num1 = num1 - num2; // num1 = 12 - 5 = 7 
+        //Reverse string
+        var rev = "";
+        var name = "alex";
+        for (index = name.length-1; index>=0; index-=1){
+            rev+=name[index];
+        }
+        console.log(name);
+        console.log(rev);
+
+        //Count numbers
+        var number = 89374875944909;
+        var temp = number;
+        var arr = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        while (temp > 0){
+            arr[temp % 10] += 1; // מערך במיקום של ספרה אחרונה לעלות ב 1
+            temp = parseInt(temp/10); // להוריד את הסיפרה האחרונה של המערך
+        }
+        for (var counter = 0; counter < arr.length; counter +=1){
+            if (arr[counter] > 0){
+                console.log(counter + ":" + arr[counter]);
+            }
+        }
+        console.log(arr);
+        */
+        //
+        var result = "";
+        var number = 5001; // convert it to 0015
+        var temp = number;
+        var myArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        // Iteration on the number
+        while (temp > 0){
+            myArr[ temp % 10] += 1;
+            temp = parseInt(temp/10);
+        }
+        // Iteration on the result
+        for (var counter = 0; counter < myArr.length; counter += 1){
+            for (var index = 0; index < myArr[counter]; index += 1){
+                result += counter;
+            }
+        }
+        console.log(result);
+        
+        //Split
+        var email = "alexkor2204@gmail.com";
+        if (email.split("@").length != 2){
+            console.log("Invalid email address");
+        } else {
+            console.log(" The email address is valid");
+        }
+    </script>
+</body>
+</html>
