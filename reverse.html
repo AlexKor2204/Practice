@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+<body>
+    <script>
+        var sentence = prompt("Please enter the sentence");
+        var result ="";
+        var rev = sentence.split(" ");
+        for (var counter = rev.length -1; counter >= 0; counter -=1){
+            result += rev[counter] + " ";
+        }
+        document.write(result);
+    </script>
+</body>
+</html>
