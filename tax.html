@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax calculation</title>
+</head>
+<body>
+    <center>
+        <h1>Tax</h1><hr/>
+        <input type="number" name="salary" id="money" placeholder="Enter salary brutto"/>
+        <input type="button" value="calc" onclick="calcTax()"/>
+        <div>Tax 10%:<span id="tax10"></span></div>
+        <div>Tax 20%:<span id="tax20"></span></div><hr/>
+        <div>Salary after 10% tax:<span id="salary10"></span></div>
+        <div>Salary after 20% tax:<span id="salary20"></span></div>
+    </center>
+    <script>
+        var tax10 = document.getElementById("tax10");
+        var tax20 = document.getElementById("tax20");
+        var salary10 = document.getElementById("salary10");
+        var salary20 = document.getElementById("salary20");
+        var salary = document.getElementById("money");
+        function calcTax(){
+            var total = Number(salary.value);
+            tax10.innerHTML = total * 0.1;
+            tax20.innerHTML = total * 0.2;
+            salary10. innerHTML = total * 0.9;
+            salary20. innerHTML = total * 0.8;
+
+        }
+    </script>
+</body>
+</html>
