@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <center>
+        <div id="ourTime"></div><hr/><br/>
+        <input type="text" placeholder="What you need to do" id="job"/><br/><br/>
+        <select id="name">
+            <option value="First">First</option>
+            <option value="Second">Second</option>
+        </select><br/><br/>
+        <input type="date" id="jobDate"/><br/><br/>
+        <input type="button" onclick="addJob()" value="Add"/><br/><br/><hr/>
+        <table width="70%" border="1" cellspacing="1" cellpadding="1" id="jobTable">
+            <!-- <th>Id</th> -->
+            <th>Job</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Done</th>
+        </table>
+    </center>
+    <script>
+        var ourTime = document.getElementById("ourTime");
+        var date;
+        setInterval(function(){
+            date= new Date();
+            var dateSplit = date.toLocaleDateString().split(",");
+            ourTime.innerHTML = dateSplit[0] + "<br/>" + dateSplit[1];
+        },800);
+        function addJob(){
+            var job = document.getElementById("job");
+            var name = document.getElementById("name");
+            var jobDate = document.getElementById("jobDate");
+            var jobTable = document.getElementById("jobTable");
+            var myData ="";
+            //var itemId = "item" + date.getTime();
+            myData += "<tr>";
+                myData += "<td>" + job.value +"</td>";
+                myData += "<td>" + name.value +"</td>";
+                myData += "<td>" + jobDate.value +"</td>";
+                myData += "<td><input type = 'checkbox'</td>";
+            myData += "</tr>";
+            jobTable.innerHTML += myData;
+        }
+    </script>
+</body>
+</html>
