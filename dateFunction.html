@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date function</title>
+</head>
+<body>
+    <center>
+        <input type="date" onchange="handleDate()" id="myDate"/>
+        <div id="result"></div>
+    </center>
+    <script>
+        function handleDate(){
+            var myDate = document.getElementById("myDate");
+            //console.log(myDate);
+            var result = document.getElementById("result");
+            result.innerHTML = normalDate(myDate.value);
+        }
+        function normalDate(oldDate){
+            var change = oldDate.split("-");
+            //console.log(change);
+            var newDate = change[2] + "/" + change[1] + "/" + change[0];
+            return newDate;
+        }
+    </script>
+</body>
+</html>

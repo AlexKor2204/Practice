@@ -27,7 +27,8 @@
         var date;
         setInterval(function(){
             date= new Date();
-            var dateSplit = date.toLocaleDateString().split(",");
+            var dateSplit = date.toLocaleString().split(",");
+            console.log(date);
             ourTime.innerHTML = dateSplit[0] + "<br/>" + dateSplit[1];
         },800);
         function addJob(){
